@@ -9,6 +9,16 @@ public class Driver : MonoBehaviour
 {
     const int MoveUnitsPerSecond = 4;
 
+    void Start()
+    {
+        Vector3 scale = transform.localScale;
+
+        scale.x *= 2;
+        scale.y *= 2;
+
+        transform.localScale = scale;
+    }
+
     // Update is called once per frame
     void Update()
     {
