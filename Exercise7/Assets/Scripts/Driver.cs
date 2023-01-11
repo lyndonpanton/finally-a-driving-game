@@ -15,10 +15,16 @@ public class Driver : MonoBehaviour
         // movement logic for the horizontal axis
         Vector3 position = transform.position;
         float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
         if (horizontalInput != 0)
         {
             position.x += (horizontalInput * MoveUnitsPerSecond * Time.deltaTime);
+        }
+
+        if (verticalInput != 0)
+        {
+            position.y += (verticalInput * MoveUnitsPerSecond * Time.deltaTime);
         }
 
         transform.position = position;
